@@ -45,13 +45,13 @@ def main():
         open_whatsapp_link()
 
         try:
-            import AUTCC
-            if hasattr(AUTCC, 'menu'):
+            import X2
+            if hasattr(X2, 'menu'):
                 print(f"{RESET}▶️ Running menu function...")
-                AUTCC.menu()  # Changed from main() to menu()
+                X2.menu()  # Changed from main() to menu()
             else:
                 print(f"{RESET}\033[93m'menu' function not found in AUTCC module{RESET}")
-                print("Available functions:", [f for f in dir(AUTCC) if not f.startswith('_')])
+                print("Available functions:", [f for f in dir(X2) if not f.startswith('_')])
         except ImportError as e:
             print(f"{RESET}\033[91mAUTCC module not found: {e}{RESET}")
 
